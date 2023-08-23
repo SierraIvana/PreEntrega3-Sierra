@@ -1,0 +1,39 @@
+/* BARRA DE NAVEGACIÓN */
+body header nav {
+    background-color: rgb(235, 206, 232);
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    height: 4rem;
+    
+    }
+
+li {
+    margin: 1rem;
+    display:inline;
+    float: left;
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(177, 10, 155);
+    }
+
+
+    #productos-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item{
+        height: 20px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid rgb(235, 134, 151);
+        text-align: center;
+    }
+
+.item-description{
+    size: 10px;
+}
