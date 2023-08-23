@@ -94,10 +94,11 @@ const productos = [
 ];
 
 
-const containerProductos= document.querySelector("#productos-container")
+const containerProductos = document.querySelector("#productos-container")
 const generarTarjetas = productos => {
-    const cards= productos.reduce ((acumuladora, element)=>{
-        return acumuladora +`
+    const cards = productos.reduce((acumuladora, element) => {
+        return acumuladora + `
+        <div class="tarjeta">
         <div class="item">
         <img src= ${element.imagen || "./img/outOfStock.jpeg"} alt="imagen de producto">
         </div>
@@ -112,17 +113,18 @@ const generarTarjetas = productos => {
         <div>
             <button onclick=AgregarAlStorage(${element.id})>Agregar al Carrito</button>
         </div>
+        </div>
             `}, "");
 
-    containerProductos.innerHTML= cards
+    containerProductos.innerHTML = cards
 }
 
 generarTarjetas(productos)
-const AgregarAlStorage = (id) =>{
+const AgregarAlStorage = (id) => {
 
-    const articulo= productos.find( seleccion => seleccion.id === id);
+    const articulo = productos.find(seleccion => seleccion.id === id);
 
-    localStorage.setItem (id, JSON.stringify(articulo))
+    localStorage.setItem(id, JSON.stringify(articulo))
 }
 
 
